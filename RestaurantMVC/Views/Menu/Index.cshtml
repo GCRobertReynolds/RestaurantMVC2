@@ -1,0 +1,19 @@
+﻿@using RestaurantMVC.Models
+@model IEnumerable<Genre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Browse Genres</h3>
+<p>
+    Select from @Model.Count()
+    genres:
+</p>
+<ul>
+    @foreach (Genre item in Model)
+    {
+        @*<li><a href="/Menu/Browse?genre=@item.Name">@item.Name</a></li>*@
+        <li>@Html.ActionLink(item.Name, "Browse", new { genre = item.Name })</li>
+    }
+</ul>

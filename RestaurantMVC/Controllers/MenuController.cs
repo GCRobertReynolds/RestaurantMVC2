@@ -11,24 +11,31 @@ namespace RestaurantMVC.Controllers
     {
         //
         // GET: /Menu/
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello from Menu.Index()";
+            List<Genre> genres = new List<Genre>
+            {
+                new Genre("Appetizers"),
+                new Genre("Mains"),
+                new Genre("Desserts"),
+                new Genre("Drinks")
+            };
+            return View(genres);
         }
 
         //
         // GET: /Menu/Browse?genre=Drinks
-        public string Browse(string genre)
+        public ActionResult Browse(string genre)
         {
-            string message = HttpUtility.HtmlEncode("Menu.Browse, Genre= " + genre);
-            return message;
+            Genre genreModel = new Genre(genre);
+            return View(genreModel);
         }
 
         //
         // GET: /Menu/Details/5
         public ActionResult Details(int id = 1)
         {
-            var Menu = new Menu("Menu " + id);
+            Menu Menu = new Menu("Menu " + id);
             return View(Menu);
         }
     }
