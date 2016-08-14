@@ -22,6 +22,8 @@ namespace RestaurantMVC.Models
         {
             this.Title = Title;
         }
+
+        public int MenuID { get; set; }
         public string Title { get; set; }
         public Genre Genre { get; set; }
     }
