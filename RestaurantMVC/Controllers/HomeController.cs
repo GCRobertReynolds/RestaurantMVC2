@@ -8,11 +8,15 @@ namespace RestaurantMVC.Controllers
 {
     public class HomeController : Controller
     {
+        //
+        // GET: /Home/
         public ActionResult Index()
         {
             return View();
         }
 
+        //
+        // GET: /About/
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +24,8 @@ namespace RestaurantMVC.Controllers
             return View();
         }
 
+        //
+        // GET: /Contact/
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
