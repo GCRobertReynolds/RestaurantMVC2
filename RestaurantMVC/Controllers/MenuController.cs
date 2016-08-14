@@ -14,17 +14,22 @@ namespace RestaurantMVC.Controllers
         {
             return "Hello from Menu.Index()";
         }
+
         //
-        // GET: /Menu/Browse
-        public string Browse()
+        // GET: /Menu/Browse?genre=Drinks
+        public string Browse(string genre)
         {
-            return "Hello from Menu.Browse()";
+            string message = HttpUtility.HtmlEncode("Menu.Browse, Genre= " + genre);
+            return message;
         }
+
         //
-        // GET: /Menu/Details
-        public string Details()
+        // GET: /Menu/Details/5
+        public string Details(int id = 1)
         {
-            return "Hello from Menu.Details()";
+            string message = "Menu.Details, ID = " + id;
+
+            return message;
         }
     }
 }
