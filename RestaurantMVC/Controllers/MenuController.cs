@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using RestaurantMVC.Models;
 
 namespace RestaurantMVC.Controllers
 {
@@ -25,11 +26,10 @@ namespace RestaurantMVC.Controllers
 
         //
         // GET: /Menu/Details/5
-        public string Details(int id = 1)
+        public ActionResult Details(int id = 1)
         {
-            string message = "Menu.Details, ID = " + id;
-
-            return message;
+            var Menu = new Menu("Menu " + id);
+            return View(Menu);
         }
     }
 }
