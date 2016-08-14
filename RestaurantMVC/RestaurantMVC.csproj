@@ -169,7 +169,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppetizersController.cs" />
+    <Compile Include="Controllers\DessertsController.cs" />
+    <Compile Include="Controllers\DrinksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
@@ -269,6 +273,26 @@
     <Content Include="Views\Menu\Details.cshtml" />
     <Content Include="Views\Menu\Browse.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Appetizers\Create.cshtml" />
+    <Content Include="Views\Appetizers\Delete.cshtml" />
+    <Content Include="Views\Appetizers\Details.cshtml" />
+    <Content Include="Views\Appetizers\Edit.cshtml" />
+    <Content Include="Views\Appetizers\Index.cshtml" />
+    <Content Include="Views\Mains\Create.cshtml" />
+    <Content Include="Views\Mains\Delete.cshtml" />
+    <Content Include="Views\Mains\Details.cshtml" />
+    <Content Include="Views\Mains\Edit.cshtml" />
+    <Content Include="Views\Mains\Index.cshtml" />
+    <Content Include="Views\Desserts\Create.cshtml" />
+    <Content Include="Views\Desserts\Delete.cshtml" />
+    <Content Include="Views\Desserts\Details.cshtml" />
+    <Content Include="Views\Desserts\Edit.cshtml" />
+    <Content Include="Views\Desserts\Index.cshtml" />
+    <Content Include="Views\Drinks\Create.cshtml" />
+    <Content Include="Views\Drinks\Delete.cshtml" />
+    <Content Include="Views\Drinks\Details.cshtml" />
+    <Content Include="Views\Drinks\Edit.cshtml" />
+    <Content Include="Views\Drinks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

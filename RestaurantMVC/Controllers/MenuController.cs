@@ -7,10 +7,12 @@ using RestaurantMVC.Models;
 
 namespace RestaurantMVC.Controllers
 {
+    [Authorize]
     public class MenuController : Controller
     {
         //
         // GET: /Menu/
+        [AllowAnonymous]
         public ActionResult Index()
         {
             List<Genre> genres = new List<Genre>
@@ -25,6 +27,7 @@ namespace RestaurantMVC.Controllers
 
         //
         // GET: /Menu/Browse?genre=Drinks
+        [AllowAnonymous]
         public ActionResult Browse(string genre)
         {
             Genre genreModel = new Genre(genre);
@@ -33,6 +36,7 @@ namespace RestaurantMVC.Controllers
 
         //
         // GET: /Menu/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int id = 1)
         {
             Menu Menu = new Menu("Menu " + id);
