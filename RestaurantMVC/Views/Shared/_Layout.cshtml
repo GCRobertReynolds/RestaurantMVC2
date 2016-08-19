@@ -21,13 +21,14 @@
                 <a href="@Url.Action("Index", "Home")" class="navbar-brand"><img id="brand" alt="Brand" src="~/Assets/images/logo.png"/> MVC Restaurant</a>
             </div>
             <div class="navbar-collapse collapse">
-                @*Implement Security in future update*@
-                @*@Html.Partial("_LoginPartial")*@
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Menu", "Index", "Menu")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -36,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application - Robert Reynolds (200288068)</p>
         </footer>
     </div>
 
